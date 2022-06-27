@@ -1,4 +1,6 @@
 * Enten-Simulator 2022
 
 ** Setup
-`git clone https://github.com/vincentmader/enten-simulator-2022`
+#+begin_src shell
+git clone https://github.com/vincentmader/enten-simulator-2022
+#+end_src
