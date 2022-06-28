@@ -63,6 +63,11 @@ class Game:
                 if event.key == pygame.K_e:
                     egg = Egg(player.position)
                     self.entities.append(egg)
+            if event.type == pygame.MOUSEBUTTONUP:
+                print(player.type_id)
+                player.type_id += 1 
+                if player.type_id > 7:
+                    player.type_id = 0
             if event.type == pygame.QUIT: 
                 sys.exit()
 
@@ -128,13 +133,10 @@ class Duck:
 
     def render(self, screen, frame_id):
         orientation_id = get_orientation_id(self.velocity)
-        # animation_phase_id = 50*int(frame_id/50) % 4
 
-        x = self.type_id * 3 + (self.animation_phase_id if self.animation_phase_id != 3 else 1)
-        y = self.type_id * 4 + orientation_id
-        
-        img_id = [x, y]
-        img = pygame.image.load(f"sprites/ducks/{img_id[0]}_{img_id[1]}.png")
+        x = (self.type_id % 4) * 3 + (self.animation_phase_id if self.animation_phase_id != 3 else 1)
+        y = (self.type_id // 4) * 4 + orientation_id
+        img = pygame.image.load(f"sprites/ducks/{x}_{y}.png")
 
         img = pygame.transform.scale(img, SIZE_DUCK)
         ballrect = img.get_rect()
