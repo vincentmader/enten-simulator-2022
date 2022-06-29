@@ -4,8 +4,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 from tqdm import tqdm
 import os
+import sys
 
-name = "ducks"
+name = sys.argv[1]
 
 path = f"../resources/sprites/{name}.png"
 os.system(f"mkdir -p ../resources/sprites/{name}")
