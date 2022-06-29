@@ -7,9 +7,10 @@ import os
 import sys
 
 name = sys.argv[1]
+print(f"Creating sprites for: {name}")
 
 path = f"../resources/sprites/{name}.png"
-os.system(f"mkdir -p ../resources/sprites/{name}")
+os.makedirs(f"../resources/sprites/{name}", exist_ok=True)
 image = Image.open(path)
 arr = np.asarray(image)
 
