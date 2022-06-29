@@ -21,6 +21,7 @@ class Game:
 
         self.player = Duck(config.INITIAL_POSITION)
         self.player.is_leader = True
+        self.player.age = 10000
 
         self.is_running = True
         self.frame_id = 0
@@ -52,22 +53,6 @@ class Game:
         for entity in self.get_entities():
             entity.render(self.screen, self.frame_id)
 
-        # ballrect = ballrect.move(velocity)
-    
-        # x_min = ballrect.left
-        # x_max = ballrect.right
-        # y_min = ballrect.top
-        # y_max = ballrect.bottom
-    
-        # if x_max < 0:
-        #     ballrect.left += WINDOW_SIZE[0]
-        # elif x_max > WINDOW_WIDTH:
-        #     ballrect.right -= WINDOW_SIZE[0]
-        # if y_max < 0:
-        #     ballrect.top += WINDOW_SIZE[1]
-        # elif y_max > WINDOW_HEIGHT:
-        #     ballrect.bottom -= WINDOW_SIZE[1]
-
         pygame.display.flip()
 
     def handle_event(self, event):
@@ -86,6 +71,10 @@ class Game:
                 egg_id = len(self.eggs)
                 egg = Egg(egg_id, self.player.type_id, self.player.position)
                 self.eggs.append(egg)
+            if event.key == pygame.K_t:
+                self.player.type_id += 1 
+                if self.player.type_id > 7:
+                    self.player.type_id = 0
             if event.key == pygame.K_q:
                 sys.exit()
         if event.type == pygame.KEYUP:
@@ -98,9 +87,7 @@ class Game:
             if event.key in [pygame.K_UP, pygame.K_k]:
                 self.player.move("down")
         if event.type == pygame.MOUSEBUTTONDOWN:
-            self.player.type_id += 1 
-            if self.player.type_id > 7:
-                self.player.type_id = 0
+            pass
         if event.type == pygame.QUIT: 
             sys.exit()
 
