@@ -5,7 +5,7 @@ import pygame
 from random import randint
 
 import config
-from config import SIZE_DUCK, DUCK_ACCELERATION
+from config import SIZE_DUCK, DUCK_ACCELERATION, DUCK_GROWUP_TIME
 import utils
 
 class Duck:
@@ -39,7 +39,10 @@ class Duck:
         elif self.position[1] > config.WINDOW_HEIGHT:
             self.position[1] -= config.WINDOW_HEIGHT
 
-        self.age += randint(1, 5)
+        foo = randint(1, 5)
+        self.age += foo
+        # if self.age < DUCK_GROWUP_TIME and self.age + foo >= DUCK_GROWUP_TIME:
+        #     self.quack()
 
     def move(self, direction):
         if direction == "right":
@@ -68,7 +71,7 @@ class Duck:
 
         x = (self.type_id % 4) * 3 + (self.animation_phase_id if self.animation_phase_id != 3 else 1)
         y = (self.type_id // 4) * 4 + self.orientation_id
-        if self.age < 5000:
+        if self.age < DUCK_GROWUP_TIME:
             path = os.path.join(config.PATH_TO_SPRITES, f"miniducks/{x}_{y}.png")
         else:
             path = os.path.join(config.PATH_TO_SPRITES, f"ducks/{x}_{y}.png")
