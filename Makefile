@@ -1,4 +1,4 @@
 run:
 	./src/main.py
 setup:
-	./setup.sh
+	./utils/setup.sh
