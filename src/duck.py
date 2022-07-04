@@ -19,10 +19,18 @@ class Duck:
         self.orientation_id = 0
         self.animation_phase_id = 0
 
+        self.is_following_leader = False
+
     def forward(self, game):
         if not self.is_leader and game.frame_id % 60 == 0:
             self.velocity += 0.5*np.array([randint(-1, 1), randint(-1, 1)])
             self.velocity *= 0.8
+        if self.is_following_leader and not self.is_leader:
+            tmp = self.velocity
+            v = sum([i**2 for i in tmp])**.5
+            pos = game.player.position
+            phi = np.arctan2(pos[1] - self.position[1], pos[0] - self.position[0])
+            self.velocity = np.array([v * np.cos(phi), v * np.sin(phi)])
         self.position = self.position + self.velocity * config.DT
 
         # if self.position[0] < 0 or config.WINDOW_WIDTH < self.position[0]:
@@ -87,8 +95,9 @@ class Duck:
         ballrect.top = int(self.position[1] - img_size[0]/2)
         screen.blit(img, ballrect)
 
-    def quack(self):
+    def quack(self, world):
+        for duck in world.ducks:
+            duck.is_following_leader = not duck.is_following_leader
         path = os.path.join(config.PATH_TO_SOUNDS, "quack.mp3")
         soundObj = pygame.mixer.Sound(path)
         soundObj.play()
-

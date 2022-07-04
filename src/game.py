@@ -66,7 +66,7 @@ class Game:
             if event.key in [pygame.K_UP, pygame.K_k]:
                 self.player.move("up")
             if event.key == pygame.K_SPACE:
-                self.player.quack()
+                self.player.quack(self)
             if event.key == pygame.K_e:
                 egg_id = len(self.eggs)
                 egg = Egg(egg_id, self.player.type_id, self.player.position)
