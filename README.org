@@ -1,19 +1,20 @@
 #+author: Vincent C. Mader
 #+title: Enten-Simulator 2022
 
-* Game Setup
+* Requirements
 CLI-Tool requirements:
 - ~python3~
 - ~git~ (optional)
 - ~make~ (optional)
 
-Python requirements (will be installed automatically using setup script):
+Python requirements (these will be installed automatically using the setup script):
 - ~pygame~
 - ~numpy~
 - ~Pillow~ (setup only)
 - ~matplotlib~ (setup only)
 - ~tqdm~ (setup only)
 
+* Game Setup
 If you have ~git~ installed, you may clone this repository by running the following in your terminal:
 #+begin_src shell
 git clone https://github.com/vincentmader/enten-simulator-2022
