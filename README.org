@@ -20,7 +20,7 @@ git clone https://github.com/vincentmader/enten-simulator-2022
 #+end_src
 Otherwise, download it via the green ~Code~ button on the top of this page.
 
-Then, navigate to this project in your terminal. If you have ~make~ installed, continue by running
+Then, navigate to this project's directory in your terminal. If you have ~make~ installed, continue by running
 #+begin_src shell
 make setup
 #+end_src
