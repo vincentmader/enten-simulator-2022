@@ -57,6 +57,7 @@ class Game:
 
     def handle_event(self, event):
         if event.type == pygame.KEYDOWN:
+            # MOVEMENT
             if event.key in [pygame.K_LEFT, pygame.K_h]:
                 self.player.move("left")
             elif event.key in [pygame.K_RIGHT, pygame.K_l]:
@@ -65,16 +66,20 @@ class Game:
                 self.player.move("down")
             elif event.key in [pygame.K_UP, pygame.K_k]:
                 self.player.move("up")
+            # QUACK
             elif event.key == pygame.K_q:
                 self.player.quack(self)
+            # EGG PRODUCTION
             elif event.key == pygame.K_e:
                 egg_id = len(self.eggs)
                 egg = Egg(egg_id, self.player.type_id, self.player.position)
                 self.eggs.append(egg)
+            # VARIANT CHANGE
             elif event.key == pygame.K_v:
                 self.player.type_id += 1 
                 if self.player.type_id > 7:
                     self.player.type_id = 0
+            # QUIT GAME
             elif event.key == pygame.K_ESCAPE:
                 sys.exit()
         elif event.type == pygame.KEYUP:
