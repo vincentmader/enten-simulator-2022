@@ -7,14 +7,12 @@ CLI-Tool requiremens:
 - ~git~ (optional)
 - ~make~ (optional)
 
-Python requirements:
+Python requirements (will be installed automatically using setup script):
 - ~pygame~
 - ~numpy~
-
-Python requirements (setup only):
-- ~Pillow~
-- ~matplotlib~
-- ~tqdm~
+- ~Pillow~ (setup only)
+- ~matplotlib~ (setup only)
+- ~tqdm~ (setup only)
 
 If you have ~git~ installed, you may clone this repository by running the following in your terminal:
 #+begin_src shell
