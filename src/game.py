@@ -59,35 +59,35 @@ class Game:
         if event.type == pygame.KEYDOWN:
             if event.key in [pygame.K_LEFT, pygame.K_h]:
                 self.player.move("left")
-            if event.key in [pygame.K_RIGHT, pygame.K_l]:
+            elif event.key in [pygame.K_RIGHT, pygame.K_l]:
                 self.player.move("right")
-            if event.key in [pygame.K_DOWN, pygame.K_j]:
+            elif event.key in [pygame.K_DOWN, pygame.K_j]:
                 self.player.move("down")
-            if event.key in [pygame.K_UP, pygame.K_k]:
+            elif event.key in [pygame.K_UP, pygame.K_k]:
                 self.player.move("up")
-            if event.key == pygame.K_SPACE:
+            elif event.key == pygame.K_q:
                 self.player.quack(self)
-            if event.key == pygame.K_e:
+            elif event.key == pygame.K_e:
                 egg_id = len(self.eggs)
                 egg = Egg(egg_id, self.player.type_id, self.player.position)
                 self.eggs.append(egg)
-            if event.key == pygame.K_v:
+            elif event.key == pygame.K_v:
                 self.player.type_id += 1 
                 if self.player.type_id > 7:
                     self.player.type_id = 0
-            if event.key == pygame.K_q:
+            elif event.key == pygame.K_ESCAPE:
                 sys.exit()
-        if event.type == pygame.KEYUP:
+        elif event.type == pygame.KEYUP:
             if event.key in [pygame.K_LEFT, pygame.K_h]:
                 self.player.move("right")
-            if event.key in [pygame.K_RIGHT, pygame.K_l]:
+            elif event.key in [pygame.K_RIGHT, pygame.K_l]:
                 self.player.move("left")
-            if event.key in [pygame.K_DOWN, pygame.K_j]:
+            elif event.key in [pygame.K_DOWN, pygame.K_j]:
                 self.player.move("up")
-            if event.key in [pygame.K_UP, pygame.K_k]:
+            elif event.key in [pygame.K_UP, pygame.K_k]:
                 self.player.move("down")
-        if event.type == pygame.MOUSEBUTTONDOWN:
+        elif event.type == pygame.MOUSEBUTTONDOWN:
             pass
-        if event.type == pygame.QUIT: 
+        elif event.type == pygame.QUIT: 
             sys.exit()
 
