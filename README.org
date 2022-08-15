@@ -2,7 +2,7 @@
 #+title: Enten-Simulator 2022
 
 * Game Setup
-CLI-Tool requiremens:
+CLI-Tool requirements:
 - ~python3~
 - ~git~ (optional)
 - ~make~ (optional)
