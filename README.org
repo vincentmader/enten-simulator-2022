@@ -1,6 +1,44 @@
-* Enten-Simulator 2022
+#+author: Vincent C. Mader
+#+title: Enten-Simulator 2022
 
-** Setup
+* Game Setup
+Requirements:
+- ~python3~
+- ~git~ (optional)
+- ~make~ (optional)
+
+If you have ~git~ installed, you may clone this repository by running the following in your terminal:
 #+begin_src shell
 git clone https://github.com/vincentmader/enten-simulator-2022
 #+end_src
+Otherwise, download it via the green ~Code~ button on this page.
+
+Then, navigate to this project in your terminal. If you have ~make~ installed, continue by running
+#+begin_src shell
+make setup
+#+end_src
+to install the necessary python dependencies. Otherwise, you can also install them manually via:
+#+begin_src shell
+pip3 install -r requirements.txt
+#+end_src
+
+To start the "game", either run
+#+begin_src shell
+make
+#+end_src
+or start it manually with python:
+#+begin_src shell
+python3 src/main.py
+#+end_src
+
+* Game Controls
+|--------------------+--------------------------|
+| Key                | Function                 |
+|--------------------+--------------------------|
+| UP/DOWN/LEFT/RIGHT | movement                 |
+| h/j/k/l            | movement (for vim users) |
+| e                  | produce an egg           |
+| v                  | change duck variant      |
+| q                  | quack                    |
+| ESCAPE             | quit game                |
+|--------------------+--------------------------|
