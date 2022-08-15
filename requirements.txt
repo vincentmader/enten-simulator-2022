@@ -1,3 +1,6 @@
+Pillow
+matplotlib
+neovim
 numpy
 pygame
-neovim
+tqdm
