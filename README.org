@@ -2,10 +2,19 @@
 #+title: Enten-Simulator 2022
 
 * Game Setup
-Requirements:
+CLI-Tool requiremens:
 - ~python3~
 - ~git~ (optional)
 - ~make~ (optional)
+
+Python requirements:
+- ~pygame~
+- ~numpy~
+
+Python requirements (setup only):
+- ~Pillow~
+- ~matplotlib~
+- ~tqdm~
 
 If you have ~git~ installed, you may clone this repository by running the following in your terminal:
 #+begin_src shell
