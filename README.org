@@ -24,7 +24,9 @@ Then, navigate to this project's directory in your terminal. If you have ~make~ 
 #+begin_src shell
 make setup
 #+end_src
-to install the necessary python dependencies and create the sprite files. Otherwise, you can also run the setup script manually via:
+to install the necessary python dependencies and create the sprite files. 
+
+Otherwise, you can also run the setup script manually via:
 #+begin_src shell
 sh utils/setup.sh
 #+end_src
