@@ -71,7 +71,7 @@ class Game:
                 egg_id = len(self.eggs)
                 egg = Egg(egg_id, self.player.type_id, self.player.position)
                 self.eggs.append(egg)
-            if event.key == pygame.K_t:
+            if event.key == pygame.K_v:
                 self.player.type_id += 1 
                 if self.player.type_id > 7:
                     self.player.type_id = 0
