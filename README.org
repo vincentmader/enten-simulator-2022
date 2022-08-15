@@ -41,13 +41,13 @@ python3 src/main.py
 #+end_src
 
 * Game Controls
-|--------------------+--------------------------|
-| Key                | Function                 |
-|--------------------+--------------------------|
-| UP/DOWN/LEFT/RIGHT | movement                 |
-| h/j/k/l            | movement (for vim users) |
-| e                  | produce an egg           |
-| v                  | change duck variant      |
-| q                  | quack                    |
-| ESCAPE             | quit game                |
-|--------------------+--------------------------|
+|--------------------------+--------------------------|
+| Key                      | Function                 |
+|--------------------------+--------------------------|
+| UP / DOWN / LEFT / RIGHT | movement                 |
+| h / j / k / l            | movement (for vim users) |
+| e                        | produce an egg           |
+| v                        | change duck variant      |
+| q                        | quack                    |
+| ESCAPE                   | quit game                |
+|--------------------------+--------------------------|
