@@ -24,9 +24,9 @@ Then, navigate to this project's directory in your terminal. If you have ~make~ 
 #+begin_src shell
 make setup
 #+end_src
-to install the necessary python dependencies. Otherwise, you can also install them manually via:
+to install the necessary python dependencies and create the sprite files. Otherwise, you can also run the setup script manually via:
 #+begin_src shell
-pip3 install -r requirements.txt
+sh utils/setup.sh
 #+end_src
 
 To start the "game", either run
