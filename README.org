@@ -1,6 +1,8 @@
 #+author: Vincent C. Mader
 #+title: Enten-Simulator 2022
 
+If it walks like a duck, and quacks like a duck...
+
 * Requirements
 CLI-Tool requirements:
 - ~python3~
