@@ -47,10 +47,10 @@ python3 src/main.py
 |--------------------------+--------------------------|
 | Key                      | Function                 |
 |--------------------------+--------------------------|
-| UP / DOWN / LEFT / RIGHT | movement                 |
+| up / down / left / right | movement                 |
 | h / j / k / l            | movement (for vim users) |
+| q                        | quack                    |
 | e                        | produce an egg           |
 | v                        | change duck variant      |
-| q                        | quack                    |
 | ESCAPE                   | quit game                |
 |--------------------------+--------------------------|
