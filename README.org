@@ -3,7 +3,7 @@
 
 If it walks like a duck, and quacks like a duck...
 
-* Requirements
+*** Requirements
 CLI-Tool requirements:
 - ~python3~
 - ~git~ (optional)
@@ -16,7 +16,7 @@ Python requirements (these will be installed automatically using the setup scrip
 - ~matplotlib~ (setup only)
 - ~tqdm~ (setup only)
 
-* Game Setup
+*** Game Setup
 If you have ~git~ installed, you may clone this repository by running the following in your terminal:
 #+begin_src shell
 git clone https://github.com/vincentmader/enten-simulator-2022
@@ -43,7 +43,7 @@ or start it manually with python:
 python3 src/main.py
 #+end_src
 
-* Game Controls
+*** Game Controls
 |--------------------------+--------------------------|
 | Key                      | Function                 |
 |--------------------------+--------------------------|
