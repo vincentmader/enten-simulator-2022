@@ -1,4 +1,4 @@
 #!/bin/sh
 
-[ -d ../.venv ] || cd .. && make setup && ls
+[ -d ../.venv ] || (cd .. && make setup && cd bin)
 cd ../src && ../.venv/bin/python3 main.py
