@@ -1,4 +1,4 @@
 run:
-	./src/main.py
+	cd bin && ./run
 setup:
-	./utils/setup.sh
+	cd bin && ./setup

@@ -1,7 +1,7 @@
 import numpy as np
 
-PATH_TO_SPRITES = "resources/sprites"
-PATH_TO_SOUNDS = "resources/sounds"
+PATH_TO_SPRITES = "../resources/sprites"
+PATH_TO_SOUNDS = "../resources/sounds"
 
 # WINDOW_SCALE = 480*2.383
 # ASPECT_RATIO = 12/16

@@ -1,0 +1,11 @@
+#!/bin/sh
+
+[ -d ../.venv ] || python3 -m virtualenv ../.venv
+../.venv/bin/pip install -r ../requirements.txt
+
+../.venv/bin/python "./create_sprites.py" ducks
+../.venv/bin/python "./create_sprites.py" miniducks
+../.venv/bin/python "./create_sprites.py" monkeys
+../.venv/bin/python "./create_sprites.py" ostriches
+../.venv/bin/python "./create_sprites.py" penguins
+../.venv/bin/python "./create_sprites.py" bears

@@ -1,0 +1,4 @@
+#!/bin/sh
+
+[ -d ../.venv ] || cd .. && make setup && ls
+cd ../src && ../.venv/bin/python3 main.py
