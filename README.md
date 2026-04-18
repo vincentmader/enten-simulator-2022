@@ -1,0 +1,66 @@
+#+author: Vincent C. Mader
+#+title: Enten-Simulator 2022
+
+If it walks like a duck, and quacks like a duck...
+
+# Requirements
+
+CLI-Tool requirements:
+- ~python3~
+<!-- - ~git~ (optional) -->
+- ~make~ (optional)
+
+Python requirements: <!--(these will be installed automatically using the setup script)-->
+- ~pygame~
+- ~numpy~
+- ~Pillow~ (dev only)
+- ~matplotlib~ (dev only)
+- ~tqdm~ (dev only)
+
+# Game Setup
+
+<!-- If you have ~git~ installed, you may clone this repository by running the following in your terminal: -->
+<!-- #+begin_src shell -->
+<!-- git clone https://github.com/vincentmader/enten-simulator-2022 -->
+<!-- #+end_src -->
+<!-- Otherwise, download it via the green ~Code~ button on the top of this page. -->
+
+<!-- Then, navigate to this project's directory in your terminal. If you have ~make~ installed, continue by running -->
+<!-- ``` sh -->
+<!-- make setup -->
+<!-- ``` -->
+<!-- to install the necessary python dependencies and create the sprite files. --> 
+
+<!-- Otherwise, you can also run the setup script manually via: -->
+<!-- ``` sh -->
+<!-- sh utils/setup.sh -->
+<!-- ``` -->
+
+# Starting the Game
+
+To start the "game", either run
+```
+make
+```
+or start it manually with python:
+```
+python3 src/main.py
+```
+
+# Game Controls
+
+| Key                      | Function                 |
+|--------------------------|--------------------------|
+| up / down / left / right | movement                 |
+| h / j / k / l            | movement (for vim users) |
+| q                        | quack                    |
+| e                        | produce an egg           |
+| v                        | change duck variant      |
+| ESCAPE                   | quit game                |
+
+
+# Screenshots
+
+![Duck](./resources/screenshots/duck_0.png "")
+
+![Also Duck](./resources/screenshots/duck_1.png "")
