@@ -5,9 +5,11 @@ import time
 import numpy as np
 import pygame
 
+import background
 import config
 from duck import Duck
 from egg import Egg
+from splash import Splash
 
 # PI = np.pi
 
@@ -18,6 +20,7 @@ class Game:
     def __init__(self):
         self.ducks = []
         self.eggs = []
+        self.splashes = []
 
         self.player = Duck(config.INITIAL_POSITION)
         self.player.is_leader = True
@@ -44,12 +47,19 @@ class Game:
 
         for entity in self.get_entities():
             entity.forward(self)
-    
+
+        for splash in self.splashes:
+            splash.forward()
+        self.splashes = [s for s in self.splashes if not s.done]
+
         self.frame_id += 1
 
     def render(self):
-        self.screen.fill(black)
-        
+        background.render(self.screen)
+
+        for splash in self.splashes:
+            splash.render(self.screen)
+
         for entity in self.get_entities():
             entity.render(self.screen, self.frame_id)
 
